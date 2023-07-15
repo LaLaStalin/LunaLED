@@ -6,10 +6,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
+import DropdownLocale from "../dropdown/dropdownLocale";
 
 const NavbarContact = () => {
   const [theme, setTheme] = useState("light");
 
+  // set heme
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: light)").matches) {
       setTheme("dark");
@@ -118,8 +120,12 @@ const NavbarContact = () => {
                   </IconButton>
                 </Link>
 
-                <button color="primary">EN </button>
+                {/* EN */}
+                <div>
+                  <DropdownLocale defaultValue="EN" menuList={["EN", "TH"]} />
+                </div>
 
+                {/* Theme */}
                 <IconButton color="primary" onClick={handleThemeSwitch}>
                   <div>Dark</div>
                 </IconButton>
