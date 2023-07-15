@@ -22,7 +22,12 @@ module.exports = {
         primaryDark: "#FFFFFF",
 
         secondaryLight: "rgb(0 0 0/60)",
-        secondaryDrak: "rgb(255 255 255/70)",
+        secondaryDark: "rgb(255 255 255/70)",
+      },
+
+      Primary: {
+        mainLight: "#1876F2",
+        mainDark: "#90CAF9",
       },
 
       backgroundLight: "#FAFAFA",
