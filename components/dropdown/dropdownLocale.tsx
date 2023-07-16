@@ -5,7 +5,10 @@ import { Menu, MenuItem } from "@mui/material";
 import Link from "next-intl/link";
 import { DropdownLocaleType } from "@/type";
 
-const DropdownLocale = ({ defaultValue, menuList }: DropdownLocaleType) => {
+const DropdownLocale: React.FC<DropdownLocaleType> = ({
+  defaultValue,
+  menuList,
+}) => {
   const [currentLang, setCurrentLang] = useState<string | number>(defaultValue);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);

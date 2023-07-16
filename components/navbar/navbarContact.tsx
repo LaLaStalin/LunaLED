@@ -67,11 +67,16 @@ const NavbarContact = () => {
             </div>
 
             {/* Social Side */}
-            <div className="flex gap-[24px]">
+            <div className="flex items-center gap-[24px]">
               <TextField
                 id="outlined-basic"
-                label="Outlined"
+                label="search"
                 variant="outlined"
+                InputProps={{
+                  inputProps: {
+                    className: "bg-[#fff] h-[10px] text-sm rounded",
+                  },
+                }}
               />
 
               <div className="flex justify-center items-center ">
@@ -108,6 +113,7 @@ const NavbarContact = () => {
                     />
                   </IconButton>
                 </Link>
+
                 <Link href="/">
                   <IconButton color="primary">
                     <Image

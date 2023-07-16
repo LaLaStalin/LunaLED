@@ -5,6 +5,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useState } from "react";
 import { Menu, MenuItem } from "@mui/material";
 import { DropdownLocaleType } from "@/type";
+import Link from "next/link";
 
 const DropdownMenu = ({ defaultValue, menuList }: DropdownLocaleType) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -40,7 +41,15 @@ const DropdownMenu = ({ defaultValue, menuList }: DropdownLocaleType) => {
       >
         {menuList.map((menu) => (
           <MenuItem key={menu} onClick={() => handleClose(menu)}>
-            {menu}
+            <Link
+              href={`/pages/${menu
+                .toString()
+                .toLowerCase()
+                .split(" ")
+                .join("")}`}
+            >
+              {menu}
+            </Link>
           </MenuItem>
         ))}
       </Menu>

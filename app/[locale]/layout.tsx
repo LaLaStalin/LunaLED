@@ -33,11 +33,20 @@ export default async function RootLayout({
         dark:text-text-primaryDark
         font-roboto"
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <NavbarContact />
-          <Navbar />
-          {children}
-        </NextIntlClientProvider>
+        <body
+          className="relative light 
+        bg-backgroundLight 
+        dark:bg-backgroundDark 
+        text-text-primaryLight 
+        dark:text-text-primaryDark
+        font-roboto"
+        >
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <NavbarContact />
+            <Navbar />
+            {children}
+          </NextIntlClientProvider>
+        </body>
       </body>
     </html>
   );
