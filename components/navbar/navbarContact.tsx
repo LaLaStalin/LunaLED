@@ -7,9 +7,10 @@ import Image from "next/image";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import DropdownLocale from "../dropdown/dropdownLocale";
+import { useThemeContext } from "@/context/theme";
 
 const NavbarContact = () => {
-  const [theme, setTheme] = useState("light");
+  const { theme, setTheme }: any = useThemeContext();
 
   // set heme
   useEffect(() => {
@@ -31,6 +32,7 @@ const NavbarContact = () => {
   const handleThemeSwitch = () => {
     console.log("ff: ", theme);
     setTheme(theme === "dark" ? "light" : "dark");
+    localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
   };
 
   return (

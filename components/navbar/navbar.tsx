@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-[8px]">
+            <div className="flex items-center gap-[8px] ">
               <Image
                 src="/assets/socials/luna.png"
                 alt="luna"

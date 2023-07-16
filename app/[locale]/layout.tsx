@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale } from "next-intl";
 import { notFound } from "next/navigation";
+import { ThemeContextProvider } from "@/context/theme";
 
 export const metadata: Metadata = {
   title: "LunalED",
@@ -41,11 +42,13 @@ export default async function RootLayout({
         dark:text-text-primaryDark
         font-roboto"
         >
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <NavbarContact />
-            <Navbar />
-            {children}
-          </NextIntlClientProvider>
+          <ThemeContextProvider>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              <NavbarContact />
+              <Navbar />
+              {children}
+            </NextIntlClientProvider>
+          </ThemeContextProvider>
         </body>
       </body>
     </html>
