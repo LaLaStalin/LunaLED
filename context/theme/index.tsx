@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from "react";
 const ThemeContext = createContext({});
 
 export const ThemeContextProvider = ({ children }: any) => {
-  const [theme, setTheme] = useState<any>("light");
+  const [theme, setTheme] = useState<string>("light");
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

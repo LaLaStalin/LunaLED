@@ -32,24 +32,16 @@ export default async function RootLayout({
         dark:bg-backgroundDark 
         text-text-primaryLight 
         dark:text-text-primaryDark
-        font-roboto"
+        font-roboto
+        mx-[16px]"
       >
-        <body
-          className="relative light 
-        bg-backgroundLight 
-        dark:bg-backgroundDark 
-        text-text-primaryLight 
-        dark:text-text-primaryDark
-        font-roboto"
-        >
-          <ThemeContextProvider>
-            <NextIntlClientProvider locale={locale} messages={messages}>
-              <NavbarContact />
-              <Navbar />
-              {children}
-            </NextIntlClientProvider>
-          </ThemeContextProvider>
-        </body>
+        <ThemeContextProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <NavbarContact />
+            <Navbar />
+            {children}
+          </NextIntlClientProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

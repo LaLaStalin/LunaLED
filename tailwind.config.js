@@ -18,11 +18,11 @@ module.exports = {
 
     colors: {
       text: {
-        primaryLight: "rgb(0 0 0/87)",
-        primaryDark: "#FFFFFF",
+        primaryLight: "#050505",
+        primaryDark: "#E4E6EB",
 
-        secondaryLight: "rgb(0 0 0/60)",
-        secondaryDark: "rgb(255 255 255/70)",
+        secondaryLight: "#65676B",
+        secondaryDark: "#B0B3B8",
       },
 
       Primary: {
@@ -36,8 +36,8 @@ module.exports = {
       paperLight: "#FFFFFF",
       paperDark: "#1E1E1E",
 
-      dividerLight: "rgb(0 0 0/12)",
-      dividerDark: "rgb(255 255 255/12)",
+      dividerLight: "rgb(0 0 0)",
+      dividerDark: "rgb(255 255 255)",
 
       blue: "#1fb6ff",
       purple: "#7e5bef",

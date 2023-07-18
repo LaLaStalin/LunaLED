@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="w-full bg-paperLight dark:bg-paperDark px-[40px] pb-[16px]">
+      <header className="w-full bg-paperLight dark:bg-paperDark px-[24px] pb-[16px]">
         <nav className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/">

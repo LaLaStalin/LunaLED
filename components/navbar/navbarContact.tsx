@@ -8,6 +8,9 @@ import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import DropdownLocale from "../dropdown/dropdownLocale";
 import { useThemeContext } from "@/context/theme";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import InputSearch from "../search";
 
 const NavbarContact = () => {
   const { theme, setTheme }: any = useThemeContext();
@@ -37,7 +40,7 @@ const NavbarContact = () => {
 
   return (
     <>
-      <header className="w-full bg-paperLight dark:bg-paperDark z-[12] px-[40px] py-[16px]">
+      <header className="w-full bg-paperLight dark:bg-paperDark z-[12] px-[24px] py-[16px]">
         <div className="h-full flex flex-col justify-center ">
           <nav
             className="bg-pink-400 
@@ -70,16 +73,7 @@ const NavbarContact = () => {
 
             {/* Social Side */}
             <div className="flex items-center gap-[24px]">
-              <TextField
-                id="outlined-basic"
-                label="search"
-                variant="outlined"
-                InputProps={{
-                  inputProps: {
-                    className: "bg-[#fff] h-[10px] text-sm rounded",
-                  },
-                }}
-              />
+              <InputSearch></InputSearch>
 
               <div className="flex justify-center items-center ">
                 <Link href="/">
@@ -129,18 +123,22 @@ const NavbarContact = () => {
                 </Link>
 
                 {/* EN */}
-                <div>
+                <div className="text-text-primaryLight">
                   <DropdownLocale defaultValue="EN" menuList={["EN", "TH"]} />
                 </div>
 
                 {/* Theme */}
-                <IconButton color="primary" onClick={handleThemeSwitch}>
-                  <div>Dark</div>
+                <IconButton
+                  onClick={handleThemeSwitch}
+                  color="inherit"
+                  className="opacity-80"
+                >
+                  {theme === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
                 </IconButton>
               </div>
             </div>
           </nav>
-          <hr className="mt-[8px] text-dividerLight dark:text-dividerDark" />
+          <hr className=" mt-[8px] text-dividerLight dark:text-dividerDark opacity-10" />
         </div>
       </header>
     </>
