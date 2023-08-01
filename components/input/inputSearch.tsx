@@ -49,7 +49,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const InputSearch = () => {
   return (
-    <Search className="border-solid border-2 border-[#d3d4d5] ">
+    <Search className="border-solid border-2 border-[#d3d4d5] dark:border-[#444444]">
       <SearchIconWrapper>
         <SearchIcon className="text-text-secondaryLight opacity-30" />
       </SearchIconWrapper>

@@ -3,3 +3,8 @@ export interface DropdownLocaleType {
     menuList: string[] | number[];
   }
 
+
+export interface InfoCardSliderType {
+  name: string;
+  imgSource : string;
+}

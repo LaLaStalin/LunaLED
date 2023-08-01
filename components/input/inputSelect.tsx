@@ -6,10 +6,15 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { DropdownLocaleType } from "@/type";
 
-const InputSelect = ({ defaultValue, menuList }: DropdownLocaleType) => {
-  const [value, setValue] = useState("");
+interface InputSelectType {
+  defaultValue: string | undefined;
+  menuList: string[];
+  title: string;
+}
+
+const InputSelect = ({ defaultValue, menuList, title }: InputSelectType) => {
+  const [value, setValue] = useState(defaultValue);
 
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value as string);
@@ -18,13 +23,13 @@ const InputSelect = ({ defaultValue, menuList }: DropdownLocaleType) => {
   return (
     <Box sx={{ minWidth: 220 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">{defaultValue}</InputLabel>
+        <InputLabel id="demo-simple-select-label">{title}</InputLabel>
         <Select
           size="small"
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={value}
-          label={`${defaultValue}`}
+          label={title}
           onChange={handleChange}
           defaultValue={`${defaultValue}`}
         >

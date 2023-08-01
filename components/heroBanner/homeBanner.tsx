@@ -12,10 +12,10 @@ const HomeBanner = () => {
 
   return (
     <>
-      <section className="w-full  bg-paperLight dark:bg-paperDark] relative">
+      <section className="w-full  bg-paperLight dark:bg-paperDark] relative px-[16px]">
         {/* Video Banner */}
         {theme === "light" ? (
-          <div className="absolute top-0 w-full h-full overflow-hidden z-1">
+          <div className="absolute top-0 w-full h-full overflow-hidden z-1 ">
             <Video
               keyValue={theme}
               srcVideo="/assets/banner/bg-HomeBennerLight.mp4"
@@ -57,7 +57,7 @@ const HomeBanner = () => {
             <div className="w-[fit-content] ">
               <div
                 className="flex rounded-[4px] gap-[4px] 
-              bg-paperLight dark:bg-paperDark shadow-lg shadow-[#9ca3af] dark:shadow-[#1f2937] pr-[24px]
+              bg-paperLight dark:bg-paperDark shadow-lg shadow-[#abb2bd] dark:shadow-[#1f2937] pr-[24px]
           "
               >
                 <Image
@@ -101,28 +101,31 @@ const HomeBanner = () => {
       <section className="max-w-[1280px] mx-auto flex flex-col w-full items-center justify-center gap-[80px] ">
         <Paper
           elevation={8}
-          className="flex flex-col items-center justify-center gap-[32px] py-[60px] px-[95px] z-50 rounded-[8px] mt-[-80px] "
+          className="flex flex-col items-center justify-center gap-[32px] py-[60px] px-[95px] z-50 rounded-[8px] mt-[-80px] bg-paperLight dark:bg-paperDark"
         >
-          <h1 className="uppercase text-[40px] font-bold">
+          <h1 className="uppercase text-[40px] font-bold text-text-primaryLight dark:text-text-primaryDark">
             fins the spotlight led
           </h1>
           <div className="flex gap-[32px] flex-col md:flex-row">
             <InputSelect
               defaultValue="COB Circle"
               menuList={["COB Circle", "COB King", "Hight Bay"]}
+              title="Type"
             />
             <InputSelect
-              defaultValue="COB Circle"
-              menuList={["COB Circle", "COB King", "Hight Bay"]}
-            />{" "}
+              defaultValue="10w"
+              menuList={["10w", "50w", "100w", "200w", "400w", "500w"]}
+              title="Power"
+            />
             <InputSelect
-              defaultValue="COB Circle"
-              menuList={["COB Circle", "COB King", "Hight Bay"]}
-            />{" "}
+              defaultValue="Day Light"
+              menuList={["Day Light", "Warm White"]}
+              title="Light"
+            />
             <Button
               variant="contained"
               size="medium"
-              className="bg-Primary-mainLight w-[141px]"
+              className="bg-Primary-mainLight w-[141px] dark:text-[#fff]"
             >
               search
             </Button>

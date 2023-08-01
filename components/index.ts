@@ -5,6 +5,8 @@ import HeroBanner from "./heroBanner";
 import HomeBanner from "./heroBanner/homeBanner"
 import InputSelect from "./input/inputSelect";
 import CardSlider from "./card/cardSlider"
+import Advantages from "./heroBanner/advantages"
+import ThemeMuiProvider from "./themeMui"
 
 export {
     Navbar,
@@ -13,5 +15,6 @@ export {
     HeroBanner,
     HomeBanner,
     InputSelect,
-    CardSlider
+    CardSlider,
+    Advantages,ThemeMuiProvider
 }

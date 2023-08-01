@@ -1,4 +1,4 @@
-import { Navbar, NavbarContact } from "@/components";
+import { Navbar, NavbarContact, ThemeMuiProvider } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale } from "next-intl";
@@ -33,14 +33,16 @@ export default async function RootLayout({
         text-text-primaryLight 
         dark:text-text-primaryDark
         font-roboto
-        mx-[16px]"
+      "
       >
         <ThemeContextProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <NavbarContact />
-            <Navbar />
-            {children}
-          </NextIntlClientProvider>
+          <ThemeMuiProvider>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              <NavbarContact />
+              <Navbar />
+              {children}
+            </NextIntlClientProvider>
+          </ThemeMuiProvider>
         </ThemeContextProvider>
       </body>
     </html>

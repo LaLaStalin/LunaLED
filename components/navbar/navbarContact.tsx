@@ -10,12 +10,12 @@ import DropdownLocale from "../dropdown/dropdownLocale";
 import { useThemeContext } from "@/context/theme";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import InputSearch from "../search";
+import InputSearch from "../input/inputSearch";
 
 const NavbarContact = () => {
   const { theme, setTheme }: any = useThemeContext();
 
-  // set heme
+  // set Theme Tailwind
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: light)").matches) {
       setTheme("dark");
