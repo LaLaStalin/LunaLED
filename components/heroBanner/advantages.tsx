@@ -31,10 +31,10 @@ const advantages = () => {
       </h1>
 
       <div className="flex gap-[101px]">
-        {infoAdvantages.map((info) => (
+        {infoAdvantages.map((info, index) => (
           <span
             className="flex flex-col items-center gap-[24px]  w-[200px]"
-            key={info.text}
+            key={index}
           >
             <Image
               src={info.imgIcon}

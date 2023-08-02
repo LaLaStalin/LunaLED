@@ -7,6 +7,7 @@ import InputSelect from "./input/inputSelect";
 import CardSlider from "./card/cardSlider"
 import Advantages from "./heroBanner/advantages"
 import ThemeMuiProvider from "./themeMui"
+import ReduxProvider from "./reduxProvider";
 
 export {
     Navbar,
@@ -16,5 +17,6 @@ export {
     HomeBanner,
     InputSelect,
     CardSlider,
-    Advantages,ThemeMuiProvider
+    Advantages,ThemeMuiProvider,
+    ReduxProvider
 }

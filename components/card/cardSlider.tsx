@@ -3,7 +3,7 @@
 import { Button } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Image from "next/image";
-import { infoCardSlider } from "../constant";
+import { infoCardSlider } from "../../constant";
 import { InfoCardSliderType } from "@/type";
 
 // Swiper

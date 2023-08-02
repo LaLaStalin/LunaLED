@@ -39,8 +39,8 @@ const DropdownMenu = ({ defaultValue, menuList }: DropdownLocaleType) => {
           "aria-labelledby": "basic-button",
         }}
       >
-        {menuList.map((menu) => (
-          <MenuItem key={menu} onClick={() => handleClose(menu)}>
+        {menuList.map((menu, index) => (
+          <MenuItem key={index} onClick={() => handleClose(menu)}>
             <Link
               href={`/pages/${menu
                 .toString()

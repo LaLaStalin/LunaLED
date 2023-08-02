@@ -1,4 +1,9 @@
-import { Navbar, NavbarContact, ThemeMuiProvider } from "@/components";
+import {
+  Navbar,
+  NavbarContact,
+  ThemeMuiProvider,
+  ReduxProvider,
+} from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale } from "next-intl";
@@ -38,9 +43,11 @@ export default async function RootLayout({
         <ThemeContextProvider>
           <ThemeMuiProvider>
             <NextIntlClientProvider locale={locale} messages={messages}>
-              <NavbarContact />
-              <Navbar />
-              {children}
+              <ReduxProvider>
+                <NavbarContact />
+                <Navbar />
+                {children}
+              </ReduxProvider>
             </NextIntlClientProvider>
           </ThemeMuiProvider>
         </ThemeContextProvider>
