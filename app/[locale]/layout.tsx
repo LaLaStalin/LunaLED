@@ -3,6 +3,7 @@ import {
   NavbarContact,
   ThemeMuiProvider,
   ReduxProvider,
+  Footer,
 } from "@/components";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -47,6 +48,7 @@ export default async function RootLayout({
                 <NavbarContact />
                 <Navbar />
                 {children}
+                <Footer />
               </ReduxProvider>
             </NextIntlClientProvider>
           </ThemeMuiProvider>

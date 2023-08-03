@@ -12,7 +12,7 @@ const HomeBanner = () => {
 
   return (
     <>
-      <section className="w-full  bg-paperLight dark:bg-paperDark] relative px-[16px]">
+      <section className="w-full  bg-paperLight dark:bg-paperDark relative ">
         {/* Video Banner */}
         {theme === "light" ? (
           <div className="absolute top-0 w-full h-full overflow-hidden z-1 ">
@@ -31,7 +31,7 @@ const HomeBanner = () => {
         )}
 
         {/* Content */}
-        <div className="flex flex-col items-center gap-[24px] h-full pt-[109px]">
+        <div className="flex flex-col items-center gap-[24px] h-full pt-[109px] px-[16px]">
           <h1 className="text-[78px] font-bold uppercase tracking-[-1.5px] z-10">
             best spotlight led for you
           </h1>
@@ -106,7 +106,7 @@ const HomeBanner = () => {
           <h1 className="uppercase text-[40px] font-bold text-text-primaryLight dark:text-text-primaryDark">
             fins the spotlight led
           </h1>
-          <div className="flex gap-[32px] flex-col md:flex-row">
+          <div className="flex gap-[32px] md:flex-col">
             <InputSelect
               defaultValue="COB Circle"
               menuList={["COB Circle", "COB King", "Hight Bay"]}

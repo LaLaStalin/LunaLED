@@ -12,4 +12,31 @@ const infoCardSlider: InfoCardSliderType[] = [
   { name: "spotlight Nano", imgSource: "/assets/product/nano.png" },
 ];
 
-export { infoCardSlider };
+const socials = [
+  { icon: "la:facebook-f", color: "#0165E1", size: "32px" },
+  { icon: "simple-icons:line", color: "#10d060", size: "32x" },
+  { icon: "logos:tiktok-icon", color: "#050505", size: "32px" },
+  { icon: "simple-icons:shopee", color: "#ec4a2a", size: "28px" },
+];
+
+const infoFooter = [
+  { name: "FAQ", href: "" },
+  { name: "Contacts", href: "" },
+  { name: "Shipping + Heading", href: "" },
+  { name: "Exchanges", href: "" },
+  { name: "2019 Catalog", href: "" },
+  { name: "Returns", href: "" },
+  { name: "Search", href: "" },
+];
+
+const shopFooter = [
+  { name: "Spotlight", href: "" },
+  { name: "Nano", href: "" },
+  { name: "Nano", href: "" },
+  { name: "Spotlight", href: "" },
+  { name: "Downlight", href: "" },
+  { name: "COB King", href: "" },
+  { name: "COB King", href: "" },
+];
+
+export { infoCardSlider, socials, infoFooter, shopFooter };

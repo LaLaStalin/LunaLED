@@ -5,6 +5,7 @@ import Paper from "@mui/material/Paper";
 import Image from "next/image";
 import { infoCardSlider } from "../../constant";
 import { InfoCardSliderType } from "@/type";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,13 +16,16 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const CardSlider = () => {
+  const matchesMD = useMediaQuery("(max-width:990px)");
+  const matchesSM = useMediaQuery("(max-width:770px)");
+
   return (
     <main className="px-[80px]">
       <Swiper
         // install Swiper modules
         modules={[Autoplay, Pagination, A11y]}
         spaceBetween={16}
-        slidesPerView={3}
+        slidesPerView={matchesMD ? (matchesSM ? 1 : 2) : 3}
         autoplay={{
           delay: 1200,
           disableOnInteraction: false,

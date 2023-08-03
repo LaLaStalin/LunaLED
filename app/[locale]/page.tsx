@@ -25,7 +25,9 @@ export default function Home() {
   return (
     <main className="w-full">
       <HomeBanner />
-      <h1>
+
+      {/* ตัวอย่างการใช้ redux */}
+      {/* <h1>
         {theme}" "{benz}
       </h1>
       <button
@@ -55,7 +57,7 @@ export default function Home() {
         <button onClick={() => dispatch(killingBaby("A"))}>
           Click kill Baby
         </button>
-      </div>
+      </div> */}
 
       <section className="flex flex-col gap-[80px]">
         <div className="max-w-[1280px] flex items-center mx-auto mt-[80px]">
