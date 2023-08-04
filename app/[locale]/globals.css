@@ -32,3 +32,64 @@
     transform: rotate(360deg)
   }
 }
+
+
+/* menu Sidebar */
+.menu-sidebar {
+  position: fixed;
+  top: 8;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 90%;
+  background: transparent;
+  transform: translateX(100%);
+  will-change: transform;
+  z-index: 9999;
+}
+
+.menu-sidebar > ul {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.menu-sidebar > ul > li {
+  color: #050505;
+  display: block;
+  transform-origin: -20px 50%;
+  font-weight: bold;
+  padding: 10px;
+  will-change: transform, opacity, filter;
+}
+
+.menu-sidebar > ul,
+li {
+  list-style: none;
+  margin: 0;
+}
+
+.toggle-btn {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffff;
+  padding: 10px;
+  z-index: 99999;
+}
+
+.toggle-btn path {
+  fill: #050505;
+}

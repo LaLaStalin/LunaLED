@@ -11,9 +11,14 @@ import { useThemeContext } from "@/context/theme";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import InputSearch from "../input/inputSearch";
+import { socials, socialsNav } from "@/constant";
+import { useMediaQuery } from "@mui/material";
+import Sidebar from "../sidebar/sidebar";
 
 const NavbarContact = () => {
   const { theme, setTheme }: any = useThemeContext();
+
+  const matchesMD = useMediaQuery("(max-width:990px)");
 
   // set Theme Tailwind
   useEffect(() => {
@@ -47,7 +52,7 @@ const NavbarContact = () => {
                 flex justify-between items-center"
           >
             {/* Contact Side */}
-            <div className="flex gap-[24px]">
+            <div className="flex gap-[24px] md:hidden">
               <Link href="/" className="flex items-center gap-[8px] text-md ">
                 <Icon
                   icon="ri:phone-fill"
@@ -72,55 +77,25 @@ const NavbarContact = () => {
             </div>
 
             {/* Social Side */}
-            <div className="flex items-center gap-[24px]">
-              <InputSearch></InputSearch>
+            <div className="flex items-center gap-[24px] md:pr-[40px]">
+              <div className="md:hidden">
+                <InputSearch></InputSearch>
+              </div>
 
               <div className="flex justify-center items-center ">
-                <Link href="/">
-                  <IconButton color="primary">
-                    <Image
-                      src="/assets/socials/lazada.png"
-                      alt="lazada"
-                      width={26}
-                      height={26}
-                      className="rounded-[4px]"
-                    />
-                  </IconButton>
-                </Link>
-                <Link href="/">
-                  <IconButton color="primary">
-                    <Image
-                      src="/assets/socials/shopee.png"
-                      alt="shopee"
-                      width={26}
-                      height={26}
-                      className="rounded-[4px]"
-                    />
-                  </IconButton>
-                </Link>
-                <Link href="/">
-                  <IconButton color="primary">
-                    <Image
-                      src="/assets/socials/tiktok.png"
-                      alt="tiktok"
-                      width={26}
-                      height={26}
-                      className="rounded-[4px]"
-                    />
-                  </IconButton>
-                </Link>
-
-                <Link href="/">
-                  <IconButton color="primary">
-                    <Image
-                      src="/assets/socials/facebook.png"
-                      alt="facebook"
-                      width={26}
-                      height={26}
-                      className="rounded-[4px]"
-                    />
-                  </IconButton>
-                </Link>
+                {socialsNav.map((social) => (
+                  <Link href={social.link} className="md:hidden">
+                    <IconButton color="primary">
+                      <Image
+                        src={social.img}
+                        alt={social.name}
+                        width={26}
+                        height={26}
+                        className="rounded-[4px]"
+                      />
+                    </IconButton>
+                  </Link>
+                ))}
 
                 {/* EN */}
                 <div className="text-text-primaryLight">
@@ -141,6 +116,7 @@ const NavbarContact = () => {
           <hr className=" mt-[8px] text-dividerLight dark:text-dividerDark opacity-10" />
         </div>
       </header>
+      {matchesMD && <Sidebar />}
     </>
   );
 };

@@ -47,6 +47,7 @@ export default async function RootLayout({
               <ReduxProvider>
                 <NavbarContact />
                 <Navbar />
+
                 {children}
                 <Footer />
               </ReduxProvider>

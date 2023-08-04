@@ -9,6 +9,9 @@ import Advantages from "./heroBanner/advantages"
 import ThemeMuiProvider from "./themeMui"
 import ReduxProvider from "./reduxProvider";
 import Footer from "./footer"
+import Subscribe from "./heroBanner/subscribe"
+import Sidebar from "./sidebar/sidebar";
+
 
 export {
     Navbar,
@@ -20,5 +23,7 @@ export {
     CardSlider,
     Advantages,ThemeMuiProvider,
     ReduxProvider,
-    Footer
+    Footer,
+    Subscribe,
+    Sidebar
 }

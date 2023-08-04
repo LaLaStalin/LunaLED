@@ -12,6 +12,13 @@ const infoCardSlider: InfoCardSliderType[] = [
   { name: "spotlight Nano", imgSource: "/assets/product/nano.png" },
 ];
 
+const socialsNav = [
+  { name: "facebook", img: "/assets/socials/facebook.png", link: "" },
+  { name: "lazada", img: "/assets/socials/lazada.png", link: "" },
+  { name: "shopee", img: "/assets/socials/shopee.png", link: "" },
+  { name: "tiktok", img: "/assets/socials/tiktok.png", link: "" },
+];
+
 const socials = [
   { icon: "la:facebook-f", color: "#0165E1", size: "32px" },
   { icon: "simple-icons:line", color: "#10d060", size: "32x" },
@@ -39,4 +46,4 @@ const shopFooter = [
   { name: "COB King", href: "" },
 ];
 
-export { infoCardSlider, socials, infoFooter, shopFooter };
+export { infoCardSlider, socialsNav, socials, infoFooter, shopFooter };

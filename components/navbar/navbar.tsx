@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Button from "@mui/material/Button";
@@ -5,7 +7,7 @@ import DropdownMenu from "../dropdown/dropdownMenu";
 import Link from "next/link";
 
 const Navbar = () => {
-  const t = useTranslations("Index");
+  const transla = useTranslations("Index");
 
   return (
     <>
@@ -26,12 +28,12 @@ const Navbar = () => {
           </Link>
 
           {/* Menu */}
-          <div className="flex items-center gap-[8px]">
+          <div className="flex items-center gap-[8px] sm:hidden ">
             <Button className="text-text-primaryLight dark:text-text-primaryDark">
               <Link href="/">Home</Link>
             </Button>
             <Button className="text-text-primaryLight dark:text-text-primaryDark">
-              <Link href="/pages/service">{t("titleService")}</Link>
+              <Link href="/pages/service">{transla("titleService")}</Link>
             </Button>
             <Button className="text-text-primaryLight dark:text-text-primaryDark">
               <Link href="/pages/shop">Shop</Link>
@@ -40,7 +42,6 @@ const Navbar = () => {
               <Link href="/pages/gallery">Gallery</Link>
             </Button>
             <DropdownMenu defaultValue="PAGE" menuList={["About us", "News"]} />
-
             <Button className="text-text-primaryLight dark:text-text-primaryDark">
               <Link href="/pages/contacts">Contacts</Link>
             </Button>

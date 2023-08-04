@@ -1,7 +1,12 @@
 "use client";
 
 import React from "react";
-import { HomeBanner, Advantages, CardSlider } from "@/components/index";
+import {
+  HomeBanner,
+  Advantages,
+  CardSlider,
+  Subscribe,
+} from "@/components/index";
 import { useTranslations, useMessages } from "next-intl";
 import { useAppDispatch, useAppSelector } from "@/redux/store/store";
 import { onThemeChange } from "@/redux/store/themeReducer";
@@ -11,19 +16,20 @@ import {
   onAddBaby,
   killingBaby,
 } from "@/redux/store/userReducer";
+import App from "@/components/sidebar/sidebar";
 
 export default function Home() {
-  const { theme, benz } = useAppSelector((state) => state.themeReducer);
-  const { name, surname, age, baby } = useAppSelector(
-    (state) => state.userReducer
-  );
-  const dispatch = useAppDispatch();
+  // const { theme, benz } = useAppSelector((state) => state.themeReducer);
+  // const { name, surname, age, baby } = useAppSelector(
+  //   (state) => state.userReducer
+  // );
+  // const dispatch = useAppDispatch();
 
   // useTranslations
   const t = useTranslations("Index");
 
   return (
-    <main className="w-full">
+    <main className="w-full relative">
       <HomeBanner />
 
       {/* ตัวอย่างการใช้ redux */}
@@ -74,6 +80,7 @@ export default function Home() {
         </div>
 
         <Advantages />
+        <Subscribe />
       </section>
     </main>
   );
